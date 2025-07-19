@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/dist/config/entrypoint.js';
+import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
