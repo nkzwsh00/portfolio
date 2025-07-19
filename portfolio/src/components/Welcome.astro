@@ -1,5 +1,4 @@
 ---
-import astroLogo from '../assets/astro.svg';
 import background from '../assets/background.svg';
 ---
 
@@ -7,38 +6,38 @@ import background from '../assets/background.svg';
 	<img id="background" src={background.src} alt="" fetchpriority="high" />
 	<main>
 		<section id="hero">
-			<a href="https://astro.build"
-				><img src={astroLogo.src} width="115" height="48" alt="Astro Homepage" /></a
-			>
-			<h1>
-				To get started, open the <code><pre>src/pages</pre></code> directory in your project.
-			</h1>
-			<section id="links">
-				<a class="button" href="https://docs.astro.build">Read our docs</a>
-				<a href="https://astro.build/chat"
-					>Join our Discord <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36"
-						><path
-							fill="currentColor"
-							d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83 97.68 97.68 0 0 0-29.11 0A72.37 72.37 0 0 0 45.64 0a105.89 105.89 0 0 0-26.25 8.09C2.79 32.65-1.71 56.6.54 80.21a105.73 105.73 0 0 0 32.17 16.15 77.7 77.7 0 0 0 6.89-11.11 68.42 68.42 0 0 1-10.85-5.18c.91-.66 1.8-1.34 2.66-2a75.57 75.57 0 0 0 64.32 0c.87.71 1.76 1.39 2.66 2a68.68 68.68 0 0 1-10.87 5.19 77 77 0 0 0 6.89 11.1 105.25 105.25 0 0 0 32.19-16.14c2.64-27.38-4.51-51.11-18.9-72.15ZM42.45 65.69C36.18 65.69 31 60 31 53s5-12.74 11.43-12.74S54 46 53.89 53s-5.05 12.69-11.44 12.69Zm42.24 0C78.41 65.69 73.25 60 73.25 53s5-12.74 11.44-12.74S96.23 46 96.12 53s-5.04 12.69-11.43 12.69Z"
-						></path></svg
-					>
+			<div class="profile">
+				<div class="avatar">
+					<img src="/owl.jpg" alt="Profile picture" width="80" height="80" />
+				</div>
+				<h1>ポートフォリオ</h1>
+				<p class="description">開発者のポートフォリオページです</p>
+			</div>
+			
+			<section id="social-links">
+				<a href="https://x.com/nkzw2" target="_blank" rel="noopener noreferrer" class="social-link">
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+						<path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
+					</svg>
+					X (Twitter)
+				</a>
+				
+				<div class="social-info">
+					<svg width="20" height="20" viewBox="0 0 127.14 96.36" fill="currentColor">
+						<path d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83 97.68 97.68 0 0 0-29.11 0A72.37 72.37 0 0 0 45.64 0a105.89 105.89 0 0 0-26.25 8.09C2.79 32.65-1.71 56.6.54 80.21a105.73 105.73 0 0 0 32.17 16.15 77.7 77.7 0 0 0 6.89-11.11 68.42 68.42 0 0 1-10.85-5.18c.91-.66 1.8-1.34 2.66-2a75.57 75.57 0 0 0 64.32 0c.87.71 1.76 1.39 2.66 2a68.68 68.68 0 0 1-10.87 5.19 77 77 0 0 0 6.89 11.1 105.25 105.25 0 0 0 32.19-16.14c2.64-27.38-4.51-51.11-18.9-72.15ZM42.45 65.69C36.18 65.69 31 60 31 53s5-12.74 11.43-12.74S54 46 53.89 53s-5.05 12.69-11.44 12.69Zm42.24 0C78.41 65.69 73.25 60 73.25 53s5-12.74 11.44-12.74S96.23 46 96.12 53s-5.04 12.69-11.43 12.69Z"/>
+					</svg>
+					<span>snkzw</span>
+				</div>
+				
+				<a href="https://github.com/nkzwsh00" target="_blank" rel="noopener noreferrer" class="social-link">
+					<svg width="20" height="20" viewBox="0 0 98 96" fill="currentColor">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"/>
+					</svg>
+					GitHub
 				</a>
 			</section>
 		</section>
 	</main>
-
-	<a href="https://astro.build/blog/astro-5/" id="news" class="box">
-		<svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"
-			><path
-				d="M24.667 12c1.333 1.414 2 3.192 2 5.334 0 4.62-4.934 5.7-7.334 12C18.444 28.567 18 27.456 18 26c0-4.642 6.667-7.053 6.667-14Zm-5.334-5.333c1.6 1.65 2.4 3.43 2.4 5.333 0 6.602-8.06 7.59-6.4 17.334C13.111 27.787 12 25.564 12 22.666c0-4.434 7.333-8 7.333-16Zm-6-5.333C15.111 3.555 16 5.556 16 7.333c0 8.333-11.333 10.962-5.333 22-3.488-.774-6-4-6-8 0-8.667 8.666-10 8.666-20Z"
-				fill="#111827"></path></svg
-		>
-		<h2>What's New in Astro 5.0?</h2>
-		<p>
-			From content layers to server islands, click to learn more about the new features and
-			improvements in Astro 5.0
-		</p>
-	</a>
 </div>
 
 <style>
@@ -61,150 +60,141 @@ import background from '../assets/background.svg';
 		height: 100%;
 		display: flex;
 		justify-content: center;
+		align-items: center;
 	}
 
 	#hero {
 		display: flex;
-		align-items: start;
+		align-items: center;
 		flex-direction: column;
 		justify-content: center;
-		padding: 16px;
+		padding: 32px;
+		text-align: center;
+	}
+
+	.profile {
+		margin-bottom: 2rem;
+	}
+
+	.avatar {
+		margin-bottom: 1rem;
+		display: flex;
+		justify-content: center;
+	}
+
+	.avatar img {
+		border-radius: 50%;
+		object-fit: cover;
+		border: 3px solid rgba(255, 255, 255, 0.8);
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 	}
 
 	h1 {
-		font-size: 22px;
-		margin-top: 0.25em;
+		font-size: 2.5rem;
+		margin: 0.5rem 0 0.25rem;
+		color: #111827;
+		font-weight: 600;
 	}
 
-	#links {
+	.description {
+		color: #6b7280;
+		font-size: 1.125rem;
+		margin: 0;
+		line-height: 1.6;
+	}
+
+	#social-links {
 		display: flex;
-		gap: 16px;
+		gap: 1rem;
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 
-	#links a {
+	.social-link {
 		display: flex;
 		align-items: center;
-		padding: 10px 12px;
+		gap: 0.5rem;
+		padding: 12px 20px;
 		color: #111827;
 		text-decoration: none;
-		transition: color 0.2s;
+		background: rgba(255, 255, 255, 0.9);
+		border-radius: 12px;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		transition: all 0.2s ease;
+		backdrop-filter: blur(10px);
+		font-weight: 500;
+		min-width: 120px;
+		justify-content: center;
 	}
 
-	#links a:hover {
-		color: rgb(78, 80, 86);
-	}
-
-	#links a svg {
-		height: 1em;
-		margin-left: 8px;
-	}
-
-	#links a.button {
-		color: white;
-		background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
-		box-shadow:
-			inset 0 0 0 1px rgba(255, 255, 255, 0.12),
-			inset 0 -2px 0 rgba(0, 0, 0, 0.24);
-		border-radius: 10px;
-	}
-
-	#links a.button:hover {
-		color: rgb(230, 230, 230);
-		box-shadow: none;
-	}
-
-	pre {
-		font-family:
-			ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono',
-			monospace;
-		font-weight: normal;
-		background: linear-gradient(14deg, #d83333 0%, #f041ff 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		margin: 0;
-	}
-
-	h2 {
-		margin: 0 0 1em;
-		font-weight: normal;
-		color: #111827;
-		font-size: 20px;
-	}
-
-	p {
-		color: #4b5563;
-		font-size: 16px;
-		line-height: 24px;
-		letter-spacing: -0.006em;
-		margin: 0;
-	}
-
-	code {
-		display: inline-block;
-		background:
-			linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
-			linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
-		border-radius: 8px;
-		border: 1px solid transparent;
-		padding: 6px 8px;
-	}
-
-	.box {
-		padding: 16px;
+	.social-link:hover {
 		background: rgba(255, 255, 255, 1);
-		border-radius: 16px;
-		border: 1px solid white;
+		transform: translateY(-2px);
+		box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+		color: #3245ff;
 	}
 
-	#news {
-		position: absolute;
-		bottom: 16px;
-		right: 16px;
-		max-width: 300px;
-		text-decoration: none;
-		transition: background 0.2s;
-		backdrop-filter: blur(50px);
+	.social-link svg {
+		flex-shrink: 0;
 	}
 
-	#news:hover {
-		background: rgba(255, 255, 255, 0.55);
+	.social-info {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 12px 20px;
+		color: #111827;
+		background: rgba(255, 255, 255, 0.9);
+		border-radius: 12px;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		backdrop-filter: blur(10px);
+		font-weight: 500;
+		min-width: 120px;
+		justify-content: center;
 	}
 
-	@media screen and (max-height: 368px) {
-		#news {
-			display: none;
-		}
+	.social-info svg {
+		flex-shrink: 0;
 	}
 
 	@media screen and (max-width: 768px) {
-		#container {
-			display: flex;
-			flex-direction: column;
-		}
-
 		#hero {
-			display: block;
-			padding-top: 10%;
-		}
-
-		#links {
-			flex-wrap: wrap;
-		}
-
-		#links a.button {
-			padding: 14px 18px;
-		}
-
-		#news {
-			right: 16px;
-			left: 16px;
-			bottom: 2.5rem;
-			max-width: 100%;
+			padding: 20px;
 		}
 
 		h1 {
-			line-height: 1.5;
+			font-size: 2rem;
 		}
+
+		.description {
+			font-size: 1rem;
+		}
+
+		#social-links {
+			flex-direction: column;
+			align-items: center;
+			gap: 0.75rem;
+		}
+
+	.social-link,
+	.social-info {
+		width: 200px;
+	}
+	}
+
+	@media screen and (max-width: 480px) {
+		#hero {
+			padding: 16px;
+		}
+
+		h1 {
+			font-size: 1.75rem;
+		}
+
+	.social-link,
+	.social-info {
+		width: 180px;
+		padding: 10px 16px;
+	}
 	}
 </style>
