@@ -38,6 +38,87 @@ import owlImage from '../assets/owl.jpg';
 				</a>
 			</section>
 		</section>
+
+		<!-- About Section -->
+		<section id="about" class="content-section">
+			<div class="section-container">
+				<h2>About Me</h2>
+				<div class="about-content">
+					<div class="about-text">
+						<p>WIP:このポートフォリオは現在開発中です。近日中に完成予定です。</p>
+						<p>ソフトウェア開発に情熱を持つ開発者です。新しい技術を学び、創造的な解決策を見つけることを楽しんでいます。</p>
+						<p>バックエンド開発からフロントエンド開発まで、幅広い分野で経験を積んでいます。</p>
+					</div>
+					<div class="about-details">
+						<div class="detail-item">
+							<strong>専門分野:</strong>
+							<span>フルスタック開発</span>
+						</div>
+						<div class="detail-item">
+							<strong>経験年数:</strong>
+							<span>X年+</span>
+						</div>
+						<div class="detail-item">
+							<strong>所在地:</strong>
+							<span>日本</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Skills Section -->
+		<section id="skills" class="content-section">
+			<div class="section-container">
+				<h2>Skills</h2>
+				<div class="skills-grid">
+					<div class="skill-category">
+						<h3>Backend</h3>
+						<div class="skills-list">
+							<div class="skill-item">
+								<span class="skill-name">Go</span>
+							</div>
+							<div class="skill-item">
+								<span class="skill-name">Node.js</span>
+							</div>
+							<div class="skill-item">
+								<span class="skill-name">Python</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="skill-category">
+						<h3>Frontend</h3>
+						<div class="skills-list">
+							<div class="skill-item">
+								<span class="skill-name">TypeScript</span>
+							</div>
+							<div class="skill-item">
+								<span class="skill-name">React</span>
+							</div>
+							<div class="skill-item">
+								<span class="skill-name">Vue.js</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="skill-category">
+						<h3>Tools & Others</h3>
+						<div class="skills-list">
+							<div class="skill-item">
+								<span class="skill-name">Docker</span>
+							</div>
+							<div class="skill-item">
+								<span class="skill-name">Git</span>
+							</div>
+							<div class="skill-item">
+								<span class="skill-name">AWS</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
 </div>
 
@@ -58,10 +139,12 @@ import owlImage from '../assets/owl.jpg';
 	}
 
 	main {
-		height: 100%;
+		min-height: 100%;
 		display: flex;
-		justify-content: center;
+		flex-direction: column;
 		align-items: center;
+		padding: 20px 0;
+		overflow-y: auto;
 	}
 
 	#hero {
@@ -158,6 +241,110 @@ import owlImage from '../assets/owl.jpg';
 		flex-shrink: 0;
 	}
 
+	/* Content Sections */
+	.content-section {
+		width: 100%;
+		max-width: 1200px;
+		margin: 4rem 0;
+		padding: 0 2rem;
+	}
+
+	.section-container {
+		background: rgba(255, 255, 255, 0.95);
+		border-radius: 20px;
+		padding: 3rem;
+		backdrop-filter: blur(20px);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+	}
+
+	h2 {
+		font-size: 2.25rem;
+		color: #111827;
+		text-align: center;
+		margin-bottom: 2.5rem;
+		font-weight: 700;
+	}
+
+	/* About Section */
+	.about-content {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: 3rem;
+		align-items: start;
+	}
+
+	.about-text p {
+		font-size: 1.125rem;
+		line-height: 1.8;
+		color: #4b5563;
+		margin-bottom: 1.5rem;
+	}
+
+	.about-text p:last-child {
+		margin-bottom: 0;
+	}
+
+	.about-details {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.detail-item {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.detail-item strong {
+		color: #111827;
+		font-weight: 600;
+		font-size: 0.95rem;
+	}
+
+	.detail-item span {
+		color: #6b7280;
+		font-size: 1.1rem;
+	}
+
+	/* Skills Section */
+	.skills-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2.5rem;
+	}
+
+	.skill-category h3 {
+		font-size: 1.5rem;
+		color: #111827;
+		margin-bottom: 1.5rem;
+		font-weight: 600;
+		text-align: center;
+	}
+
+	.skills-list {
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+	}
+
+	.skill-item {
+		display: flex;
+		align-items: center;
+		padding: 0.75rem 1rem;
+		background: rgba(255, 255, 255, 0.7);
+		border-radius: 8px;
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		backdrop-filter: blur(10px);
+	}
+
+	.skill-name {
+		font-weight: 500;
+		color: #374151;
+		font-size: 1rem;
+	}
+
 	@media screen and (max-width: 768px) {
 		#hero {
 			padding: 20px;
@@ -177,10 +364,38 @@ import owlImage from '../assets/owl.jpg';
 			gap: 0.75rem;
 		}
 
-	.social-link,
-	.social-info {
-		width: 200px;
-	}
+		.social-link,
+		.social-info {
+			width: 200px;
+		}
+
+		/* Content sections responsive */
+		.content-section {
+			margin: 2rem 0;
+			padding: 0 1rem;
+		}
+
+		.section-container {
+			padding: 2rem 1.5rem;
+		}
+
+		h2 {
+			font-size: 1.875rem;
+		}
+
+		.about-content {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.skills-grid {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.skill-category h3 {
+			font-size: 1.25rem;
+		}
 	}
 
 	@media screen and (max-width: 480px) {
@@ -192,10 +407,31 @@ import owlImage from '../assets/owl.jpg';
 			font-size: 1.75rem;
 		}
 
-	.social-link,
-	.social-info {
-		width: 180px;
-		padding: 10px 16px;
-	}
+		.social-link,
+		.social-info {
+			width: 180px;
+			padding: 10px 16px;
+		}
+
+		.section-container {
+			padding: 1.5rem 1rem;
+		}
+
+		h2 {
+			font-size: 1.5rem;
+			margin-bottom: 1.5rem;
+		}
+
+		.about-text p {
+			font-size: 1rem;
+		}
+
+		.skill-item {
+			justify-content: center;
+		}
+
+		.skill-name {
+			text-align: center;
+		}
 	}
 </style>
